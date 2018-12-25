@@ -16,7 +16,8 @@ function addCell() {
 }
 
 function compile(){
-	alert('it worked!');
+	var output = window.open();
+	output.document.write('<p>It worked!</p>');
 }
 
 function htmlNode(html) {
