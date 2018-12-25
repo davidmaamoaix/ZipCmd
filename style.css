@@ -5,3 +5,50 @@
 body {
 	background-color: #333;
 }
+
+@-webkit-keyframes grayRed {
+	0% {background-color: #888;}
+	100% {background-color: #F55;}
+}
+
+@-webkit-keyframes redGray {
+	0% {background-color: #F55;}
+	100% {background-color: #888;}
+}
+
+#title {
+	text-align: center;
+	margin-top: 150px;
+	font-family: Arial;
+	font-size: 50px;
+	color: #DDD;
+}
+
+#holder {
+	margin: 20px 30% 0 30%;
+}
+
+.cell {
+	width: 100%;
+	height: 75px;
+	background-color: #555;
+}
+
+.delete {
+	float: right;
+	font-family: Arial;
+	font-size: 30px;
+	height: 100%;
+	width: 15%;
+	text-align: center;
+	color: #DDD;
+	background-color: #888;
+	-webkit-animation-name: redGray;
+	-webkit-animation-duration: 0.5s;
+}
+
+.delete:hover {
+	-webkit-animation-name: grayRed;
+	-webkit-animation-duration: 0.5s;
+	background-color: #F55;
+}
