@@ -1,10 +1,10 @@
-let cell = `
+let cellRaw = `
 <div class="cell">
 	<div class="entry-holder">
 		<input type="text" placeholder="setblock ~ ~ ~ stone" class="entry">
 	</div>
-	<div class="delete">
-		<p style="margin-top: 20px;">X</p>
+	<div class="delete" onclick="delete_cell()">
+		<p class="btn-text">X</p>
 	</div>
 </div>
 `;
@@ -12,7 +12,32 @@ let cell = `
 var holder = document.getElementById('holder');
 
 function addCell() {
-	holder.innerHTML+=cell;
+	holder.appendChild(htmlNode(cellRaw));
 }
 
-document.onload = addCell();
+function compile(){
+	alert('it worked!');
+}
+
+function htmlNode(html) {
+	var temp = document.createElement('div');
+	temp.innerHTML = html.trim();
+	return temp.firstChild;
+}
+
+function delete_cell() {
+	for (var i = 0; i < holder.children.length; i++) {
+		if (hover(holder.children[i])) {
+			holder.removeChild(holder.children[i]);
+			return;
+		}
+	}
+}
+
+function hover(element) {
+	return element.parentElement.querySelector(':hover') === element;
+}
+
+document.onload = function() {
+	addCell();
+} ();

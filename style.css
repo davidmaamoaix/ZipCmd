@@ -16,6 +16,26 @@ body {
 	100% {background-color: #888;}
 }
 
+@-webkit-keyframes grayWhite {
+	0% {background-color: #888;color: #DDD;}
+	100% {background-color: #DDD;color: #888;}
+}
+
+@-webkit-keyframes whiteGray {
+	0% {background-color: #DDD;color: #888;}
+	100% {background-color: #888;color: #DDD;}
+}
+
+@-webkit-keyframes grayGreen {
+	0% {background-color: #888;}
+	100% {background-color: #0A0;}
+}
+
+@-webkit-keyframes greenGray {
+	0% {background-color: #0A0;}
+	100% {background-color: #888;}
+}
+
 #title {
 	text-align: center;
 	margin-top: 150px;
@@ -26,6 +46,28 @@ body {
 
 #holder {
 	margin: 20px 30% 0 30%;
+}
+
+#btn-holder {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 150px;
+}
+
+.btn {
+	color: #DDD;
+	background-color: #888;
+	font-family: Arial;
+	font-size: 30px;
+	display: inline-block;
+	width: 6%;
+	height: 75px;
+	margin: 0 5% 0 5%;
+	text-align: center;
+}
+
+.btn-text {
+	padding-top: 20px;
 }
 
 .cell {
@@ -52,6 +94,29 @@ body {
 	-webkit-animation-name: grayRed;
 	-webkit-animation-duration: 0.5s;
 	background-color: #F55;
+}
+
+.create {
+	-webkit-animation-name: whiteGray;
+	-webkit-animation-duration: 0.5s;
+}
+
+.create:hover {
+	-webkit-animation-name: grayWhite;
+	-webkit-animation-duration: 0.5s;
+	background-color: #DDD;
+	color: #888;
+}
+
+.compile {
+	-webkit-animation-name: greenGray;
+	-webkit-animation-duration: 0.5s;
+}
+
+.compile:hover {
+	-webkit-animation-name: grayGreen;
+	-webkit-animation-duration: 0.5s;
+	background-color: #0A0;
 }
 
 .entry-holder {
